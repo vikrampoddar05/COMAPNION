@@ -1,0 +1,370 @@
+/* ===============================
+   GLOBAL STYLES
+   =============================== */
+
+/* Reset default margins, padding and use border-box for sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Inter', sans-serif; /* Clean modern font */
+    background-color: #F8FAFC;        /* Light off-white background */
+    color: #334155;                    /* Dark grey text for readability */
+    line-height: 1.6;                  /* Comfortable line spacing */
+}
+
+/* Default link styling */
+a {
+    text-decoration: none;  /* Remove underline */
+    color: inherit;         /* Inherit parent color */
+}
+
+/* ===============================
+   CONTAINER
+   =============================== */
+
+/* Central container for sections */
+.container {
+    max-width: 1200px;  /* Max width for large screens */
+    margin: 0 auto;     /* Center horizontally */
+    padding: 0 20px;    /* Space from edges on small screens */
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar {
+    background-color: #1E3A8A; /* Indigo background */
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;   /* Navbar sticks on top when scrolling */
+    top: 0;
+    z-index: 1000;      /* Ensure navbar is above other content */
+}
+
+.nav-container {
+    display: flex;                /* Horizontal layout */
+    align-items: center;          /* Vertically center items */
+    justify-content: space-between; /* Space between logo and links */
+}
+
+
+.logo {
+    font-weight: 700;    /* Bold logo */
+    font-size: 1.5rem;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;    /* Remove bullet points */
+    display: flex;       /* Horizontal list */
+    gap: 25px;           /* Space between links */
+}
+
+.nav-links li a {
+    color: #fff;         /* White text */
+    font-weight: 500;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-links li a:hover {
+    color: #22C55E;      /* Green accent on hover */
+}
+/* ===============================
+   LIGHT / DARK MODE STYLES
+   =============================== */
+
+/* Toggle button styling */
+.theme-toggle {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #fff;
+    color: #1E3A8A;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+    background-color: #1E1E2F; /* Dark background */
+    color: #F8FAFC;            /* Light text */
+}
+
+body.dark-mode .navbar {
+    background-color: #11142D; /* Dark navbar */
+}
+
+body.dark-mode .nav-links li a {
+    color: #F8FAFC;
+}
+
+body.dark-mode .hero-title,
+body.dark-mode .section-title,
+body.dark-mode .club-card h4,
+body.dark-mode .resource-card h4 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .club-card,
+body.dark-mode .resource-card {
+    background-color: #2A2A40; /* Dark card background */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .faq-question {
+    background-color: #2A2A40;
+    color: #F8FAFC;
+}
+
+body.dark-mode .faq-answer {
+    background-color: #1E1E2F;
+    border-left-color: #22C55E;
+}
+
+body.dark-mode .footer {
+    background-color: #11142D;
+    color: #F8FAFC;
+}
+
+body.dark-mode .theme-toggle {
+    border-color: #F8FAFC;
+    color: #F8FAFC;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+   .hero-image img {
+    max-width: 100%;    /* Image scales to fit container */
+    height: auto;       /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover;   /* Ensures the image covers container nicely */
+}
+.hero {
+    padding: 80px 0;     /* Top and bottom spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;       /* Flex layout for text + image */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;     /* Allow stacking on small screens */
+    gap: 40px;           /* Space between hero text and image */
+}
+
+.hero-text {
+    flex: 1 1 400px;     /* Flexible width: grow/shrink with min width */
+}
+
+.hero-welcome {
+    font-size: 1.2rem;   /* Small welcome text */
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 3rem;     /* Main heading */
+    font-weight: 700;
+    color: #1E3A8A;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;   /* Subtitle under heading */
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;       /* Buttons side by side */
+    gap: 20px;
+    flex-wrap: wrap;     /* Stack on smaller screens */
+}
+
+/* ===============================
+   BUTTON STYLES
+   =============================== */
+.btn {
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s; /* Smooth hover animations */
+}
+
+.btn-primary {
+    background-color: #22C55E;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #16a34a;
+}
+
+.btn-secondary {
+    border: 2px solid #22C55E;
+    color: #22C55E;
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: #22C55E;
+    color: #fff;
+}
+
+/* Hero image */
+.hero-image {
+    flex: 1 1 400px;    /* Flexible width */
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;    /* Image scales with screen */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ===============================
+   SECTIONS (CLUBS & RESOURCES)
+   =============================== */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1E3A8A;
+}
+
+.section-subtitle {
+    margin-bottom: 30px;
+    color: #64748B;
+}
+
+/* Grid layout for cards */
+.clubs-grid, .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual cards */
+.club-card, .resource-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.club-card:hover, .resource-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.club-card h4, .resource-card h4 {
+    margin-bottom: 10px;
+    color: #1E3A8A;
+}
+
+/* ===============================
+   FAQ SECTION
+   =============================== */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #1E3A8A;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #162d6b;
+}
+
+.faq-answer {
+    display: none; /* Hidden by default, shown via JS */
+    padding: 10px 20px;
+    background-color: #f1f5f9;
+    border-left: 3px solid #22C55E;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1E3A8A;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ===============================
+   RESPONSIVE MEDIA QUERIES
+   =============================== */
+
+/* Medium devices (tablet) */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem; /* Slightly smaller heading */
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (mobile) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Can be replaced with hamburger menu */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack hero text & image vertically */
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center; /* Center buttons */
+    }
+}
+
+/* Extra small devices (very small phones) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem; /* Adjust subtitle */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Smaller buttons */
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Defines the document type and version of HTML -->
+
+<html lang="en">
+<!-- Root HTML element with language set to English -->
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Character encoding -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the page scales correctly on all devices -->
+
+    <title>Campus Companion</title>
+    <!-- Title shown in browser tab -->
+
+    <!-- Google Fonts for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">Campus Companion</h1>
+      
+
+
+            <nav>
+                <ul class="nav-links">
+                    <!-- Navigation links scroll to sections -->
+                    <!-- Responsive behavior: links can collapse into a hamburger menu on small screens -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#clubs">Clubs</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+
+                </ul>
+            </nav>
+            <!-- Light/Dark Mode Toggle Button -->
+<button id="theme-toggle" class="theme-toggle">🌙
+</button>
+
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-container">
+                <!-- Hero container uses flex/grid in CSS to arrange text and image -->
+
+                <div class="hero-text">
+                    <!-- Text block for hero section -->
+                    <!-- Responsive behavior: stacks above/below image on smaller screens -->
+
+                    <p class="hero-welcome">👋 Welcome Freshers!</p>
+                    <h2 class="hero-title">Campus Companion</h2>
+                    <p class="hero-subtitle">
+                        Your one-stop guide to surviving and thriving on campus.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <!-- Call-to-action buttons -->
+                        <!-- Responsive: buttons can stack vertically on small screens -->
+                        <a href="#resources" class="btn btn-primary">Explore Campus</a>
+                        <a href="#clubs" class="btn btn-secondary">View Clubs</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <!-- Image container -->
+                    <!-- Responsive: image scales down or stacks below text on small screens -->
+                    <img src="nit image.webp" alt="NIT ROURKELA">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= CLUBS SECTION ================= -->
+    <section id="clubs" class="clubs">
+        <div class="container">
+
+            <h3 class="section-title">Clubs & Societies</h3>
+            <p class="section-subtitle">
+                Explore communities that match your interests.
+            </p>
+
+            <div class="clubs-grid">
+                <!-- Grid container for club cards -->
+                <!-- Responsive: CSS grid or flex can auto-stack cards on smaller screens -->
+
+                <div class="club-card" data-category="tech">
+                    <h4>Tech Club</h4>
+                    <p>Learn coding, development, and participate in hackathons.</p>
+                </div>
+
+                <div class="club-card" data-category="cultural">
+                    <h4>Cultural Club</h4>
+                    <p>Express yourself through dance, music, and drama.</p>
+                </div>
+
+                <div class="club-card" data-category="sports">
+                    <h4>Sports Club</h4>
+                    <p>Stay fit and represent your campus in sports events.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RESOURCES SECTION ================= -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h3 class="section-title">Campus Resources</h3>
+
+            <div class="resources-grid">
+                <!-- Responsive grid layout for resources -->
+                <!-- On smaller screens, cards stack vertically -->
+
+                <div class="resource-card">
+                    <h4>📶 Wi-Fi</h4>
+                    <p>Access high-speed internet across campus.</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>📚 Library</h4>
+                    <p>Explore academic books and digital resources.</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>🏠 Hostels</h4>
+                    <p>Comfortable accommodation for students.</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>📞 Important Contacts</h4>
+                    <p>Emergency and administrative helplines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ SECTION ================= -->
+    <section id="faq" class="faq">
+        <div class="container">
+
+            <h3 class="section-title">Frequently Asked Questions</h3>
+
+            <!-- Each FAQ item is collapsible using JS -->
+            <!-- Responsive: buttons and answer div scale with screen width -->
+
+            <div class="faq-item">
+                <button class="faq-question">How can I join clubs?</button>
+                <div class="faq-answer">
+                    <p>Attend club orientations or follow official club announcements.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is coding culture beginner friendly?</button>
+                <div class="faq-answer">
+                    <p>Yes! Most clubs welcome beginners and help them grow.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How important is attendance?</button>
+                <div class="faq-answer">
+                    <p>Attendance policies vary by department and course.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer content -->
+            <p>
+                Made with ❤️ by <strong>Vikram</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Link external JS file -->
+    <!-- JS handles interactive features like FAQ accordion, dark mode, and mobile menu -->
+    <script src="script.js"></script>
+
+</body>
+</html>
